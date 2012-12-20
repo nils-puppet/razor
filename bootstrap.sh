@@ -11,8 +11,12 @@ puppet module install puppetlabs/razor
 puppet module install saz-dnsmasq
 
 mkdir /etc/puppet/manifests/nodes
+
+
 cat /etc/puppet/manifests/site.pp << EOF
 import "nodes/*"
 
 EOF
 
+cd /etc/puppet/manifests/nodes/; wget https://raw.github.com/nils-puppet/razor/master/nodes/razor.pp
+puppet apply /etc/puppet/manifests/site.pp
