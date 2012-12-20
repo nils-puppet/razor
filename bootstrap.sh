@@ -23,7 +23,7 @@ puppet module install saz-dnsmasq
 mkdir /etc/puppet/manifests/nodes
 
 
-cat /etc/puppet/manifests/site.pp << EOF
+cat > /etc/puppet/manifests/site.pp << EOF
 import "nodes/*"
 
 EOF
