@@ -6,3 +6,6 @@ apt-get update
 apt-get upgrade -y
 apt-get dist-upgrade -y
 apt-get install git puppet -y
+
+puppet module install puppetlabs/razor
+puppet module install saz-dnsmasq
