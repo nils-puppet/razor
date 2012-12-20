@@ -9,3 +9,10 @@ apt-get install git puppet -y
 
 puppet module install puppetlabs/razor
 puppet module install saz-dnsmasq
+
+mkdir /etc/puppet/manifests/nodes
+cat /etc/puppet/manifests/site.pp << EOF
+import "nodes/*"
+
+EOF
+
