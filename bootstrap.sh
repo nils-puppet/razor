@@ -28,5 +28,6 @@ import "nodes/*"
 
 EOF
 
+apt-key adv --keyserver 'keyserver.ubuntu.com' --recv-keys '7F0CEB10'
+
 cd /etc/puppet/manifests/nodes/; wget https://raw.github.com/nils-puppet/razor/master/nodes/razor.pp
-puppet apply /etc/puppet/manifests/site.pp
