@@ -50,13 +50,6 @@ node build {
 		address   => '10.10.20.1',
 }
 
-	file {'motd':
-      		ensure  => file,
-      		path    => '/etc/motd',
-      		mode    => 0644,
-      		content => "Welcome to ${hostname},\na ${operatingsystem} island in the sea of ${domain}.\n",
-}
-
 	class { 'razor':
 		address => $ipaddress_eth1,
 		username => 'razor',
