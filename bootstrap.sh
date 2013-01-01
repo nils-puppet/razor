@@ -86,14 +86,6 @@ node build {
 		template    => 'ubuntu_precise',
 }	
 
-
-#    rz_broker { 'puppet_broker':
-#      	ensure      => present,
-#      	plugin      => 'puppet',
-#      	description => 'puppet',
-#      	servers     => [ 'puppet.mivitec.net' ]
-#    }
-
     rz_tag { "controller_node1_eth0":
         tag_label   => "controller_node1_eth0",
         tag_matcher => [ {
